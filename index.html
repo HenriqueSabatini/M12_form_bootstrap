@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario_Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="row">
+        <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#instrucao">
+            Ver Instruções
+        </button>
+        <div class="collapse container" id="instrucao">
+            <p>
+                Preencha os campos: <br>
+                Nome; <br>
+                E-mail; <br>
+                Telefone. <br>
+                
+                E logo entraremos em contato, e se possivel deixe uma mensagem. <br>
+                Obrigado!
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Formulario para contato:</h2>
+            <form>
+                <label class="form-label" for="nome">Seu nome:</label>
+                <input type="text" class="form-control" id="nome"> <!--aqui o bootstrap ja coloca as dimençoes e efeitos nos campos texto, seh]ja tamanho e sombra-->
+                <label for="email" class="form-label">Seu email:</label>
+                <input type="email" class="form-control" id="email">
+                <label for="Telefone" class="form-label">Seu Telefone</label>
+                <input type="tel" class="form-control" id="telefone" pattern="^\(\d{2}\)\d{4,5}\d{4}$" placeholder="(xx)xxxxxxxxx">
+                <label for="mensagem" class="form-label">Sua mensagem:</label>
+                <textarea id="mensagem" class="form-control"></textarea>
+                <div class="form-check form-switch"> <!--form-check mantem o campo a esquerda do texto / form-switch muda de check box para modelo liga e desliga-->
+                    <label for="aceito-termos" class="form-check-label">Li e concordo</label>
+                    <input type="checkbox" class="form-check-input" id="aceito-termos">
+                </div>
+                <button class="btn btn-success">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
